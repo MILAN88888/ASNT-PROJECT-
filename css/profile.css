@@ -1,0 +1,15 @@
+#tbl,#tr
+{
+    border: 2px solid greenyellow;
+    border-collapse: collapse;
+}
+#tbl
+{
+    width: 300px;
+}
+#container
+{
+    float: right;
+    display: none;
+}
+
