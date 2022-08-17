@@ -6,17 +6,20 @@ $('#close').click(function ()
 {
         $('#container').slideUp(1000);
 });
-$('#logform').submit(function()
+$('#submit').click(function()
 {   
     var email=$('#email').val();
     var pass=$('#pass').val();
+    var err=0;
     if(email=='')
     {
         $('#emailerror').html('Please enter your email address');
+        err=1;
     }
     if(pass=='')
     {
         $('#passerror').html('Please enter your password');
+        err=1;
     }
     // $.ajax(
     // {
@@ -31,4 +34,9 @@ $('#logform').submit(function()
 
 
     // });
+    if(err==0)
+    {
+        $('#logform').submit();
+    }
+    
 });

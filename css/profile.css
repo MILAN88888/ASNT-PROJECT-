@@ -12,4 +12,66 @@
     float: right;
     display: none;
 }
+#addImage,#addVedio,#addDocument
+{
+    display: none;
+}
+#addImage button,#addVedio button,#addDocument button{
+    background-color: green;
+}
+#error
+{
+    float: right;
+    background-color: lightblue;
+    position:relative;
+}
+#btn2
+{
+    background-color: red;
 
+    
+}
+#select,#select1
+{
+  background-color: lightgreen;
+    float: left;
+}
+#tbl4, #tble4 tr, #tbl4 th, #tbl4 td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: lightpink;
+}
+#tbl5, #tble5 tr, #tbl5 th, #tbl5 td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#tbl6, #tbl6 tr, #tbl6 th, #tbl6 td
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+#buttons 
+{
+    margin-top: 10px;
+    left: 36%;
+    top: 4%;
+    
+    
+}
+#buttons button{
+    border-radius: 6px;
+    background-color: aquamarine;
+    width: 100px;
+}
+#buttons button:hover
+{
+    border-radius: 4px;
+    background-color:lawngreen
+}
+#allimages,#allvedios,#alldocuments
+{
+    margin-top: 50px;
+    margin-left: 10px;
+}

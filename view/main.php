@@ -18,7 +18,14 @@
     ';
     } 
 ?>
+<div id='maindiv'></div>
+<center><h1 id="m">Hello Programmer Welcome !!</h1></center>
+<br>
+<center><p id= "b">We will rock together....</p></center>
+<br>
 
+<center><p id="a">Here, we can add images, vedio and document files</p></center>
+</div>
 <script src="../js/main.js"></script>
 </body>
 </html>

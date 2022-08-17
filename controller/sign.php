@@ -10,6 +10,10 @@ class csign
     private $address;
     private $obj;
     private $res;
+    private $filename;
+    private $filetmp;
+    private $destination;
+
     public function __construct()
     {   
         $this->obj=new sign();
@@ -60,6 +64,93 @@ class csign
                 header('location:controller.php?msg=fail');
             }
     }
+    public function insertImage()
+    {       
+            $email1 = $_GET['email'];
+            if(isset($_POST))
+            {
+            $this->filename = isset($_FILES['img']['name']) ? $_FILES['img']['name']:null;
+            $this->filetmp =isset($_FILES['img']['tmp_name']) ? $_FILES['img']['tmp_name']:null;
+            $this->destination='../upload/img/'.$this->filename;
+            move_uploaded_file($this->filetmp, $this->destination);
+            $res=$this->obj->minsertImage($email1,$this->filename);
+
+            if($res==true)
+            header('location:../view/profile.php?msg1=succei');
+            else
+            header('location:../view/profile.php?msg2=faili');
+            }
+    }
+    public function insertVedio()
+    {       
+            $email1 = $_GET['email'];
+            if(isset($_POST))
+            {
+            $this->filename = isset($_FILES['vedio']['name']) ? $_FILES['vedio']['name']:null;
+            $this->filetmp =isset($_FILES['vedio']['tmp_name']) ? $_FILES['vedio']['tmp_name']:null;
+            $this->destination='../upload/vedio/'.$this->filename;
+            move_uploaded_file($this->filetmp, $this->destination);
+            $res=$this->obj->minsertVedio($email1,$this->filename);
+
+            if($res==true)
+            header('location:../view/profile.php?msg1=succei');
+            else
+            header('location:../view/profile.php?msg2=faili');
+            }
+    }
+    public function insertDocument()
+    {       
+            $email1 = $_GET['email'];
+            if(isset($_POST))
+            {
+            $this->filename = isset($_FILES['document']['name']) ? $_FILES['document']['name']:null;
+            $this->filetmp =isset($_FILES['document']['tmp_name']) ? $_FILES['document']['tmp_name']:null;
+            $this->destination='../upload/document/'.$this->filename;
+            move_uploaded_file($this->filetmp, $this->destination);
+            $res=$this->obj->minsertDocument($email1,$this->filename);
+
+            if($res==true)
+            header('location:../view/profile.php?msg1=succei');
+            else
+            header('location:../view/profile.php?msg2=faili');
+            }
+    }
+    public function getImage()
+    {
+        $email=$_POST['email'];
+        if(isset($_POST['email']))
+        {
+            $res1=$this->obj->mgetImage($email);
+            if($res1!=false)
+            {
+                echo json_encode($res1);
+            }
+        }
+    }
+    public function getVedio()
+    {
+        $email=$_POST['email'];
+        if(isset($_POST['email']))
+        {
+            $res1=$this->obj->mgetVedio($email);
+            if($res1!=false)
+            {
+                echo json_encode($res1);
+            }
+        }
+    }
+    public function getDocument()
+    {
+        $email=$_POST['email'];
+        if(isset($_POST['email']))
+        {
+            $res1=$this->obj->mgetDocument($email);
+            if($res1!=false)
+            {
+                echo json_encode($res1);
+            }
+        }
+    }
     
 }
 
@@ -70,5 +161,29 @@ if(!empty($_POST))
         $cobj->getLogin();
     if( $_GET['type'] && $_GET['type']=='signup')
         $cobj->getSignup();
+    if($_GET['type'] && $_GET['type']=='image')
+    {
+        $cobj->insertImage();
+    }
+    if($_GET['type'] && $_GET['type']=='vedio')
+    {
+        $cobj->insertVedio();
+    }
+    if($_GET['type'] && $_GET['type']=='document')
+    {
+        $cobj->insertDocument();
+    }
+    if($_GET['type'] && $_GET['type']=='getimage')
+    {
+        $cobj->getImage();
+    }
+    if($_GET['type'] && $_GET['type']=='getvedio')
+    {
+        $cobj->getVedio();
+    }
+    if($_GET['type'] && $_GET['type']=='getdocument')
+    {
+        $cobj->getDocument();
+    }
 }
 ?>

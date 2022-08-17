@@ -17,7 +17,17 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <?php if(isset($_SESSION['email'])){?>
+  <select name='select' id="select" onchange="myFunction()">
+        <option value="">Add</option>
+        <option value="addImage">Add Image</option>
+        <option value="addVedio" >Add Vedio</option>
+        <option value="addDocument" >Add Document</option>
+</select>
 
+  <?php } ?>
+  
+    
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       
@@ -33,7 +43,9 @@
   </div>
   <?php if(isset($_SESSION['email']))
   { ?>
+  &nbsp;&nbsp;
   <button class="btn btn-outline-success mr-5"  id= "profile" type="">Profile</button>&nbsp;
+  
   <button class="btn btn-outline-success mr-5"   id= "logout"><a href="../view/logout.php">Logut</a></button>
   <?php } ?>
   </nav>

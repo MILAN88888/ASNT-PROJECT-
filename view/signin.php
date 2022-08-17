@@ -25,12 +25,12 @@
                 <br>
                 <label>Password</label>
                 <br>
-                <input type="password" id="pass" name='pass' required/>
+                <input type="password" id="pass" name='pass' required />
                 <br>
                 <span id="passerror"></span>
                 <br>
                 <br>
-                <button type="submit" id="submit" name='submit'>Log in</button>
+                <button  id="submit" name='submit'>Log in</button>
                 
                 <br>
                 <p id='error'></p>

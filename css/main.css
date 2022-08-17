@@ -12,3 +12,17 @@
     background-color: red;
     
 }
+#maindiv
+{
+    margin-top: 100px;
+}
+#m{
+    text-decoration: none;
+    text-shadow: 2px;
+    color: lightskyblue;
+}
+#a,#b
+{
+    color:white;
+    
+}
