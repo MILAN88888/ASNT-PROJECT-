@@ -34,7 +34,7 @@
   <?php if(isset($_SESSION['email']))
   { ?>
   <button class="btn btn-outline-success mr-5"  id= "profile" type="">Profile</button>&nbsp;
-  <button class="btn btn-outline-success mr-5"  id= "logout" type="submit"><a href="../view/logout.php">Logut</a></button>
+  <button class="btn btn-outline-success mr-5"   id= "logout"><a href="../view/logout.php">Logut</a></button>
   <?php } ?>
   </nav>
     

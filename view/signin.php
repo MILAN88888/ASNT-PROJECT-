@@ -16,7 +16,7 @@
             <div>
             <h1>Login Form</h1>
             <br>
-            <form action="signin.php" id='logform' autocomplete="off" method="POST">
+            <form action="sign.php?type=signin" id='logform' autocomplete="off" method="POST">
                 <lable>Email</lable>
                 <br>
                 <input type="email" id='email'name='email' required></input>

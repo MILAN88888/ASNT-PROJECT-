@@ -16,7 +16,7 @@
             <div>
             <h1>Registration Form</h1>
             <br>
-            <form action="signup.php" id='logforms' autocomplete="off" method="POST">
+            <form action="sign.php?type=signup" id='logforms' autocomplete="off" method="POST">
                 <table>
                 <tr><td>Fname</td><td><input type="text" id='fnames'name='fname' required/><span id="fnameerrors" ><br></span></td></tr>
                 <tr><td>Lname</td><td><input type="text" id='lnames'name='lname' required/><span id="lnameerrors" ><br></span></td></tr>
