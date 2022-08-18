@@ -19,7 +19,7 @@ if(!isset($_SESSION['email']))
     <div id="container">
     <?php  
     if(isset($_SESSION['email']))
-    {   $arr=$_GET['msg'];
+    {   
         // print_r($arr);
         $email = $_SESSION['email'];
         $name = $_SESSION['fname']." ".$_SESSION['lname'];
@@ -41,11 +41,11 @@ if(!isset($_SESSION['email']))
 <div id="error">
 <p id="demo_2">
     <?php
-     if(isset($_GET['msg1'] )&&$_GET['msg1']=='succei' )
+     if(isset($_GET['msg1']) && $_GET['msg1']=='succei' )
      {echo "add successfully";}
-     if(isset($_GET['msg'] )&&$_GET['msg']=='sucess' )
+     if(isset($_GET['msg']) && ($_GET['msg']=='sucess'))
      {echo "Welcome ".$_SESSION['fname'];}
-    if(isset($_GET['msg2']) &&$_GET['msg2']=='faili' )
+    if(isset($_GET['msg2']) && $_GET['msg2']=='faili' )
      {echo "Not added";}
      ?>
      <button id="btn2">x</button></p> 
